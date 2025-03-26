@@ -5,6 +5,7 @@ const variables = require('./variables')
 const feedbacks = require('./feedbacks')
 const presets = require('./presets')
 const configFields = require('./config')
+const UpgradeScripts = require('./upgrades')
 
 class KeyOSCInstance extends InstanceBase {
     constructor(internal) {
@@ -24,6 +25,22 @@ class KeyOSCInstance extends InstanceBase {
     async init(config) {
         this.config = config
         this.updateStatus(InstanceStatus.Connecting)
+
+        this.presentationList = []
+        this.selectedIndex = 0
+        
+        // Set default variable values
+        this.setVariableValues({
+            'totalPresentations': 0,
+            'selectedIndex': 0,
+            'selectedPresentation': 'No presentations',
+            'presentationName': '',
+            'currentSlide': 0,
+            'slideCount': 0,
+            'slidesRemaining': 0,
+            'state': 'Stopped',
+            'playing': '0'
+        })
 
         this.initActions()
         this.initVariables()
@@ -312,4 +329,4 @@ class KeyOSCInstance extends InstanceBase {
     }
 }
 
-runEntrypoint(KeyOSCInstance, [])
+runEntrypoint(KeyOSCInstance, UpgradeScripts)
