@@ -1,0 +1,27 @@
+{
+	"id": "keyosc",
+	"name": "KeyOSC",
+	"shortname": "KeyOSC",
+	"description": "KeyOSC is a Keynote companion app that allows Open Sound Control (OSC) control of Keynote on macOS.",
+	"version": "1.0.0",
+	"license": "MIT",
+	"repository": "git+https://github.com/bitfocus/companion-module-keyosc.git",
+	"bugs": "https://github.com/bitfocus/companion-module-keyosc/issues",
+	"maintainers": [
+		{
+			"name": "Marcin Wardecki",
+			"email": "m.wardecki89@gmail.com",
+			"github": "mko1989"
+		}
+	],
+	"runtime": {
+		"type": "node18",
+		"api": "nodejs-ipc",
+		"apiVersion": "0.0.0",
+		"entrypoint": "../main.js"
+	},
+	"legacyIds": ["keyosc"],
+	"manufacturer": "HighPass",
+	"products": ["KeyOSC"],
+	"keywords": ["Keynote", "OSC", "Open Sound Control"]
+}
