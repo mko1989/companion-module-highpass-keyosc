@@ -1,4 +1,4 @@
-# KeyOSC - an OSC API for Keynote
+### KeyOSC Companion module
 
 Companion module for controlling Keynote via OSC.
 
