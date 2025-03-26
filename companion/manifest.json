@@ -1,5 +1,5 @@
 {
-	"id": "keyosc",
+	"id": "highpass-keyosc",
 	"name": "KeyOSC",
 	"shortname": "KeyOSC",
 	"description": "KeyOSC is a Keynote companion app that allows Open Sound Control (OSC) control of Keynote on macOS.",
